@@ -45,19 +45,19 @@
     r.Kuro.SkeletalMesh.LODDistanceScale=20
     r.Streaming.FullyLoadUsedTextures=1
     ```
-4. (Extract)[https://support.microsoft.com/en-us/windows/zip-and-unzip-files-f6dde0a7-0fec-8294-e1d3-703ed85e7ebc] WWMI archive to any convenient location
+4. [Extract](https://support.microsoft.com/en-us/windows/zip-and-unzip-files-f6dde0a7-0fec-8294-e1d3-703ed85e7ebc) WWMI archive to any convenient location
 5. Open **d3dx.ini** in WWMI folder with text editor of your choise
-6. Locate [Loader] section in the top of the file
+6. Locate **[Loader]** section in the top of the file
 7. Change `launch = ` according to location of your Wuthering Waves folder, for example:
     ```ini
     launch = C:\Games\WutheringWavesj3oFh\Wuthering Waves Game\Client\Binaries\Win64\Client-Win64-Shipping.exe
     ```
-8. Double-click **WWMI Loader.exe**`** to start the game with WWMI
+8. Double-click **WWMI Loader.exe** to start the game with WWMI
 
 ## Mod Installation
 
-1. (Extract)[https://support.microsoft.com/en-us/windows/zip-and-unzip-files-f6dde0a7-0fec-8294-e1d3-703ed85e7ebc] mod's archive
-2. Put extracted folder into the `Mods` folder
+1. [Extract](https://support.microsoft.com/en-us/windows/zip-and-unzip-files-f6dde0a7-0fec-8294-e1d3-703ed85e7ebc) mod's archive
+2. Put extracted folder into the **Mods** folder
 
 ## Mod Hot Load
 
@@ -68,9 +68,9 @@ To properly load newly installed mod without restarting the game:
 
 ## Mod User Hotkeys
 
-**[F1]**: Toggle User Guide
-**[F6]**: Toggle WWMI dependant mods
-**[F10]**: Reload WWMI and save mods settings
+- **[F1]**: Toggle User Guide
+- **[F6]**: Toggle WWMI dependant mods
+- **[F10]**: Reload WWMI and save mods settings
 
 ## Mod Development
 To get into mod creation refer to the **WWMI Tools** and its [Modder Guide](https://github.com/SpectrumQT/WWMI-TOOLS/blob/main/guides/modder_guide.md):
@@ -79,10 +79,10 @@ To get into mod creation refer to the **WWMI Tools** and its [Modder Guide](http
 
 ## Mod Developer Hotkeys
 
-**[F9]**: Disable WWMI while held
-**[Ctrl]+[F9]**: Toggle Perfomance Monitor
-**[Ctrl]+[F1]**: Toggle Hunting Mode Guide
-**Numpad [0]**: Toggle Hunting Mode (green text)
+- **[F9]**: Disable WWMI while held
+- **[Ctrl]+[F9]**: Toggle Perfomance Monitor
+- **[Ctrl]+[F1]**: Toggle Hunting Mode Guide
+- **Numpad [0]**: Toggle Hunting Mode (green text)
 
 ## Resources
 
