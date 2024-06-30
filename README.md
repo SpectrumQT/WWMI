@@ -18,7 +18,7 @@
 ## Features  
 
 - **Highly Optimized** — Built with minimization of performance footprint in mind
-- **Cross-Platform** — Works with NVidia and AMD GPUs, should work with Intel (not tested)
+- **Cross-Platform** — Works with NVidia and AMD GPUs
 - **Modder Friendly** — Enables fully automatic model re-import mod creation with [WWMI Tools](https://github.com/SpectrumQT/WWMI-Tools)
 - **No Vertex Limit** — Removes all limitations caused by component layout of original models
 - **Shape Keys Support** — Handles original shape keys overrides and enables creation of custom ones
@@ -26,7 +26,7 @@
 
 ## Disclaimers  
 
-- **Alpha-1 Waring** — This is a first public alpha release, so you can expect all kinds of issues. Also, please keep in mind that WWMI feature set and formats are not set in stone and may be subject to change.
+- **Alpha-1 Waring** — WWMI is in early alpha testing phase, so you can expect all kinds of issues. Also, please keep in mind that WWMI feature set and formats are not set in stone and may be subject to change.
 
 - **Compatibility Waring** — WWMI uses 3dmigoto settings that may require existing mods to update texture hashes to work correctly. It also uses performance-friendly approach to trigger texture overrides, so some existing texture mods just won't work with it, and others may force WWMI to do excessive calcs degrading performance. Please be patient and wait for said mods to update.
 
