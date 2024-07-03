@@ -15,6 +15,22 @@
   <a href="#license">License</a>
 </p>
 
+## For Mod Authors
+
+**WWMI 0.6.1** and **WWMI Tools 0.8.2** updates resolved issues with Shape Keys!
+To fix face and shoulder animations in exported mods refer to [WWMI Tools](https://github.com/SpectrumQT/WWMI-TOOLS) page for instructions.
+
+## Known Issues
+
+- Blurry edges on modded model during fast movement (fix: disable DLSS or FSR)
+- Glitch with duplicate modded objects on screen (merged skeleton limitation)
+
+## Disclaimers  
+
+- **Alpha-1 Warning** — WWMI is in early alpha testing phase, so you can expect all kinds of issues. Also, please keep in mind that WWMI feature set and formats are not set in stone and may be subject to change.
+
+- **Compatibility Warning** — WWMI uses 3dmigoto settings that may require existing mods to update texture hashes to work correctly. It also uses performance-friendly approach to trigger texture overrides, so some existing texture mods just won't work with it, and others may force WWMI to do excessive calcs degrading performance. Please be patient and wait for said mods to update.
+
 ## Features
 
 - **Highly Optimized** — Built with minimization of performance footprint in mind
