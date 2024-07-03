@@ -17,7 +17,7 @@
 
 ## For Mod Authors
 
-**WWMI 0.6.1** and **WWMI Tools 0.8.2** updates resolved issues with Shape Keys!
+**WWMI 0.6.1** and **WWMI Tools 0.8.3** updates resolved issues with Shape Keys!
 To fix face and shoulder animations in exported mods refer to [WWMI Tools](https://github.com/SpectrumQT/WWMI-TOOLS) page for instructions.
 
 ## Known Issues
@@ -43,7 +43,7 @@ To fix face and shoulder animations in exported mods refer to [WWMI Tools](https
 ## WWMI Installation
 
 1. Install [**Python**](https://www.python.org/downloads/) (it's widely used for different modding tools)
-2. Disable [Hardware-Accelerated GPU Scheduling](https://devblogs.microsoft.com/directx/hardware-accelerated-gpu-scheduling/) to force WuWa load in **DX11** mode (loader doesn't work with DX12)
+2. Disable [Hardware-Accelerated GPU Scheduling](https://devblogs.microsoft.com/directx/hardware-accelerated-gpu-scheduling/) to force WuWa load in **DX11** mode (alternatively, follow [this comments thread](https://gamebanana.com/posts/11742776), but it may not work for you)
     * Go to **Graphics Settings** of your Windows
     * Set **Hardware-Accelerated GPU Scheduling** to **OFF**
     * **Restart** your PC
