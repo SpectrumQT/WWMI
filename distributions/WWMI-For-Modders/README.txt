@@ -12,17 +12,17 @@ To get into mod creation refer to the WWMI Tools:
 2. Gamebanana: https://gamebanana.com/tools/17289
 
 
-Disclaimer1: This is a first public alpha release, so you can expect all kinds of issues. Also, please keep in mind that WWMI feature set and formats are not set in stone and may be subject to change.
-Disclaimer2: WWMI uses 3dmigoto settings that may require existing mods to update texture hashes to work correctly. It also uses performance-friendly approach to trigger texture overrides, so some existing texture mods just won't work with it, and others may force WWMI to do excessive calcs degrading performance. Please be patient and wait for said mods to update.
-
+Disclaimers:
+Alpha-1 Waring — WWMI is in early alpha testing phase, so you can expect all kinds of issues. Also, please keep in mind that WWMI feature set and formats are not set in stone and may be subject to change.
+Compatibility Waring — WWMI uses 3dmigoto settings that may require existing mods to update texture hashes to work correctly. It also uses performance-friendly approach to trigger texture overrides, so some existing texture mods just won't work with it, and others may force WWMI to do excessive calcs degrading performance. Please be patient and wait for said mods to update.
 
 Installation:
-1. NB! Install Python from https://www.python.org/downloads/ (it's widely used for different modding tools)
-2. NB! Disable Hardware-accelerated GPU scheduling to force WuWa load in DX11 mode (loader doesn't work with DX12)
+1. Install Python from https://www.python.org/downloads/ (it's widely used for different modding tools)
+2. Disable Hardware-accelerated GPU scheduling to force WuWa load in DX11 mode (loader doesn't work with DX12)
 2.1 Go to Graphics Settings of your Windows
 2.2 Set Hardware-accelerated GPU scheduling to OFF
 2.3. Restart your PC
-3. NB! Change character LOD setting in Engine.ini:
+3. Change character LOD setting in Engine.ini:
 3.1. Open \Wuthering Waves\Wuthering Waves Game\Client\Saved\Config\WindowsNoEditor\Engine.ini
 3.2. Add following lines to the bottom of the file (refer https://gamebanana.com/tuts/17580 for tutorial):
 
