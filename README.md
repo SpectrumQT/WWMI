@@ -74,7 +74,7 @@ To properly load newly installed mod without restarting the game:
 
 ## Mod User Hotkeys
 
-- **[F1]**: Toggle User Guide
+- **[F12]**: Toggle User Guide
 - **[F6]**: Toggle WWMI dependant mods
 - **[F10]**: Reload WWMI and save mods settings
 
@@ -87,7 +87,7 @@ To get into mod creation refer to the **WWMI Tools** and its [Modder Guide](http
 
 - **[F9]**: Disable WWMI while held
 - **[Ctrl]+[F9]**: Toggle Perfomance Monitor
-- **[Ctrl]+[F1]**: Toggle Hunting Mode Guide
+- **[Ctrl]+[F12]**: Toggle Hunting Mode Guide
 - **Numpad [0]**: Toggle Hunting Mode (green text)
 
 ## Resources

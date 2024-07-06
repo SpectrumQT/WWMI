@@ -16,10 +16,10 @@ To get into mod creation refer to the WWMI Tools:
 
 Installation:
 1. Install Python from https://www.python.org/downloads/ (it's widely used for different modding tools)
-2. Disable Hardware-accelerated GPU scheduling to force WuWa load in DX11 mode (loader doesn't work with DX12)
-2.1 Go to Graphics Settings of your Windows
-2.2 Set Hardware-accelerated GPU scheduling to OFF
-2.3. Restart your PC
+2. Force Wuthering Waves to load in **DX11** mode:
+2.1. Locate and open following folder:
+     `\Wuthering Waves Game\Engine\Plugins\Runtime\`
+2.2. Remove Nvidia folder
 3. Change character LOD setting in Engine.ini:
 3.1. Open \Wuthering Waves\Wuthering Waves Game\Client\Saved\Config\WindowsNoEditor\Engine.ini
 3.2. Add following lines to the bottom of the file (refer https://gamebanana.com/tuts/17580 for tutorial):
@@ -48,7 +48,7 @@ Mod Hot Load (without game restart):
 
 
 Mod User Hotkeys:
-[F1]: Toggle User Guide
+[F12]: Toggle User Guide
 [F6]: Toggle WWMI
 [F10]: Reload WWMI and save mods settings
 
@@ -56,7 +56,7 @@ Mod User Hotkeys:
 Mod Developer Hotkeys:
 [F9]: Disable WWMI while held
 [Ctrl]+[F9]: Toggle Perfomance Monitor
-[Ctrl]+[F1]: Toggle Hunting Mode Guide
+[Ctrl]+[F12]: Toggle Hunting Mode Guide
 Numpad [0]: Toggle Hunting Mode (green text)
 
 
