@@ -3,8 +3,9 @@
 <h4 align="center">Custom 3d models loader for Wuthering Waves</h4>
 
 <p align="center">
-  <a href="#features">Features</a> •
   <a href="#disclaimers">Disclaimers</a> •
+  <a href="#known-issues">Known Issues</a> •
+  <a href="#features">Features</a> •
   <a href="#wwmi-installation">WWMI Installation</a> •
   <a href="#mod-installation">Mod Installation</a> • 
   <a href="#mod-hot-load">Mod Hot Load</a> • 
@@ -15,21 +16,16 @@
   <a href="#license">License</a>
 </p>
 
-## For Mod Authors
-
-**WWMI 0.6.1** and **WWMI Tools 0.8.3** updates resolved issues with Shape Keys!
-To fix face and shoulder animations in exported mods refer to [WWMI Tools](https://github.com/SpectrumQT/WWMI-TOOLS) page for instructions.
-
-## Known Issues
-
-- Blurry edges on modded model during fast movement (fix: disable DLSS or FSR)
-- Glitch with duplicate modded objects on screen (merged skeleton limitation)
-
 ## Disclaimers  
 
 - **Alpha-1 Warning** — WWMI is in early alpha testing phase, so you can expect all kinds of issues. Also, please keep in mind that WWMI feature set and formats are not set in stone and may be subject to change.
 
 - **Compatibility Warning** — WWMI uses 3dmigoto settings that may require existing mods to update texture hashes to work correctly. It also uses performance-friendly approach to trigger texture overrides, so some existing texture mods just won't work with it, and others may force WWMI to do excessive calcs degrading performance. Please be patient and wait for said mods to update.
+
+## Known Issues
+
+- Blurry edges on modded model during fast movement (fix: disable DLSS or FSR)
+- Glitch with duplicate modded objects on screen (merged skeleton limitation)
 
 ## Features
 
@@ -43,16 +39,16 @@ To fix face and shoulder animations in exported mods refer to [WWMI Tools](https
 ## WWMI Installation
 
 1. Install [**Python**](https://www.python.org/downloads/) (it's widely used for different modding tools)
-2. Disable [Hardware-Accelerated GPU Scheduling](https://devblogs.microsoft.com/directx/hardware-accelerated-gpu-scheduling/) to force WuWa load in **DX11** mode (alternatively, follow [this comments thread](https://gamebanana.com/posts/11742776), but it may not work for you)
-    * Go to **Graphics Settings** of your Windows
-    * Set **Hardware-Accelerated GPU Scheduling** to **OFF**
-    * **Restart** your PC
+2. Force Wuthering Waves to load in **DX11** mode:
+    * Locate and open following folder:
+    `\Wuthering Waves Game\Engine\Plugins\Runtime\`
+    * Remove Nvidia folder
 3. Change [Character LOD settings](https://gamebanana.com/tuts/17580) in **Engine.ini**:
     * Open `\Wuthering Waves\Wuthering Waves Game\Client\Saved\Config\WindowsNoEditor\Engine.ini`
     * Add following lines to the bottom of the file:
     ```ini
     [ConsoleVariables]
-    r.Kuro.SkeletalMesh.LODDistanceScale=20
+    r.Kuro.SkeletalMesh.LODDistanceScale=25
     r.Streaming.FullyLoadUsedTextures=1
     ```
 4. [Extract](https://support.microsoft.com/en-us/windows/zip-and-unzip-files-f6dde0a7-0fec-8294-e1d3-703ed85e7ebc) WWMI archive to any convenient location

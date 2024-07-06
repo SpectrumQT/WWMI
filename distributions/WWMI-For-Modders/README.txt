@@ -4,17 +4,15 @@ Wuthering Waves Model Importer ALPHA-1
 
 Warning! WWMI Alpha-1 is intended to be used by experienced modders and advanced users.
 
+Disclaimers:
+Alpha-1 Warning — WWMI is in early alpha testing phase, so you can expect all kinds of issues. Also, please keep in mind that WWMI feature set and formats are not set in stone and may be subject to change.
+Compatibility Warning — WWMI uses 3dmigoto settings that may require existing mods to update texture hashes to work correctly. It also uses performance-friendly approach to trigger texture overrides, so some existing texture mods just won't work with it, and others may force WWMI to do excessive calcs degrading performance. Please be patient and wait for said mods to update.
 
-WWMI is a work of passion coded mostly single-handedly that took over 2 months of sifting trough byte buffers and shader assembley code as well as tens of thousands of code lines written in multiple languages to make it happen. It is incredibly complex project pushing the very limits of what's possible to do with 3dmigoto. While it's already fully functional, it'll take quite a while until it take its final shape.
 
 To get into mod creation refer to the WWMI Tools:
 1. GitHub: https://github.com/SpectrumQT/WWMI-Tools
 2. Gamebanana: https://gamebanana.com/tools/17289
 
-
-Disclaimers:
-Alpha-1 Waring — WWMI is in early alpha testing phase, so you can expect all kinds of issues. Also, please keep in mind that WWMI feature set and formats are not set in stone and may be subject to change.
-Compatibility Waring — WWMI uses 3dmigoto settings that may require existing mods to update texture hashes to work correctly. It also uses performance-friendly approach to trigger texture overrides, so some existing texture mods just won't work with it, and others may force WWMI to do excessive calcs degrading performance. Please be patient and wait for said mods to update.
 
 Installation:
 1. Install Python from https://www.python.org/downloads/ (it's widely used for different modding tools)
@@ -27,7 +25,7 @@ Installation:
 3.2. Add following lines to the bottom of the file (refer https://gamebanana.com/tuts/17580 for tutorial):
 
 [ConsoleVariables]
-r.Kuro.SkeletalMesh.LODDistanceScale=20
+r.Kuro.SkeletalMesh.LODDistanceScale=25
 r.Streaming.FullyLoadUsedTextures=1
 
 4. Extract WWMI archive to any convenient location
