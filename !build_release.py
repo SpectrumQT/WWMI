@@ -56,11 +56,12 @@ class Project:
     def __init__(self):
         self.root_dir = Path().resolve()
         self.trash_path = self.root_dir / '!TRASH'
-        self.core_dir = self.root_dir / 'core'
-        self.distr_dir = self.root_dir / 'distributions'
-        self.release_dir = self.root_dir / '!RELEASES'
+        self.distr_dir = self.root_dir / 'WWMI'
+        self.core_dir = self.distr_dir / 'Core'
         self.wwmi_dir = self.core_dir / 'WWMI'
         self.wwmi_ini_path = self.wwmi_dir / 'WuWa-Model-Importer.ini'
+        self.wwmi_readme_path = self.root_dir / 'README.md'
+        self.release_dir = self.root_dir / '!RELEASES'
         self.version = Version(self.wwmi_ini_path)
         self.version_dir = self.release_dir / str(self.version)
 
@@ -81,21 +82,16 @@ class Project:
                 self.trash(self.version_dir)
                 print(f'Existing directory sent to {self.trash_path}!')
 
-        for distr in os.listdir(self.distr_dir):
-            dir_path = self.distr_dir / distr
-            release_path = self.version_dir / dir_path.name
-            if dir_path.is_dir():
-                shutil.copytree(dir_path, release_path)
+        release_path = self.version_dir / 'WWMI'
 
-        for build_dir in os.listdir(self.version_dir):
-            release_path = self.version_dir / build_dir
-            if release_path.is_dir():
-                shutil.copytree(self.core_dir, release_path / 'Core')
+        if self.distr_dir.is_dir():
+            shutil.copytree(self.distr_dir, release_path)
 
-        for build_dir in os.listdir(self.version_dir):
-            build_path = self.version_dir / build_dir
-            if build_path.is_dir():
-                shutil.make_archive(str(self.version_dir / f'{build_dir}-v{self.version}'), 'zip', self.version_dir, build_dir)
+        if self.wwmi_readme_path.is_file():
+            shutil.copy2(self.wwmi_readme_path, release_path / 'README.md')
+
+        if release_path.is_dir():
+            shutil.make_archive(str(self.version_dir / f'{release_path.name}-v{self.version}'), 'zip', self.version_dir, release_path.name)
 
 
 if __name__ == '__main__':
