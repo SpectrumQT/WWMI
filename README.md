@@ -37,11 +37,12 @@
 
 ## WWMI Installation
 
-1. Force Wuthering Waves to load in **DX11** mode:
+1. Download and install [the latest Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)
+2. Force Wuthering Waves to load in **DX11** mode:
     * Locate and open following folder:
     `\Wuthering Waves Game\Engine\Plugins\Runtime\Streamline\`
     * Remove Nvidia folder
-2. Change [Character LOD settings](https://gamebanana.com/tuts/17580) in **Engine.ini**:
+3. Change [Character LOD settings](https://gamebanana.com/tuts/17580) in **Engine.ini**:
     * Open `\Wuthering Waves\Wuthering Waves Game\Client\Saved\Config\WindowsNoEditor\Engine.ini`
     * Add following lines to the bottom of the file:
     ```ini
@@ -49,14 +50,14 @@
     r.Kuro.SkeletalMesh.LODDistanceScale=25
     r.Streaming.FullyLoadUsedTextures=1
     ```
-3. [Extract](https://support.microsoft.com/en-us/windows/zip-and-unzip-files-f6dde0a7-0fec-8294-e1d3-703ed85e7ebc) WWMI archive to any convenient location
-4. Open **d3dx.ini** in WWMI folder with text editor of your choise
-5. Locate **[Loader]** section in the top of the file
-6. Change `launch = ` according to location of your Wuthering Waves folder, for example:
+4. [Extract](https://support.microsoft.com/en-us/windows/zip-and-unzip-files-f6dde0a7-0fec-8294-e1d3-703ed85e7ebc) WWMI archive to any convenient location
+5. Open **d3dx.ini** in WWMI folder with text editor of your choise
+6. Locate **[Loader]** section in the top of the file
+7. Change `launch = ` according to location of your Wuthering Waves folder, for example:
     ```ini
     launch = C:\Games\WutheringWavesj3oFh\Wuthering Waves Game\Client\Binaries\Win64\Client-Win64-Shipping.exe
     ```
-7. Double-click **WWMI Loader.exe** to start the game with WWMI
+8. Double-click **WWMI Loader.exe** to start the game with WWMI
 
 ## Mod Installation
 
