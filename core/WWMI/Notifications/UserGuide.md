@@ -13,6 +13,7 @@ Mod User Hotkeys:
 [F12]: Toggle this User Guide
 [F6]: Toggle WWMI
 [F10]: Reload WWMI and Save mods settings
+[Alt]+[F12]: Toggle Compatibility Mode
 
 Mod Developer Hotkeys:
 [F9]: Disable WWMI while held
