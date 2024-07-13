@@ -18,14 +18,13 @@
 
 ## Disclaimers  
 
-- **Alpha-1 Warning** — WWMI is in early alpha testing phase, so you can expect all kinds of issues. Also, please keep in mind that WWMI feature set and formats are not set in stone and may be subject to change.
+- **Alpha-2 Warning** — WWMI is in second alpha testing phase. Feature set and formats are more or less set in stone, but you still can expect some issues here and there.
 
-- **Compatibility Warning** — WWMI uses 3dmigoto settings that may require existing mods to update texture hashes to work correctly. It also uses performance-friendly approach to trigger texture overrides, so some existing texture mods just won't work with it, and others may force WWMI to do excessive calcs degrading performance. Please be patient and wait for said mods to update.
+- **Compatibility Warning** — WWMI doesn't load non-WWMI mods for performance reasons, but if you're okay with up to 50% FPS hit, you can follow [this guide](https://gamebanana.com/tuts/17683) (not recommended).
 
 ## Known Issues
 
-- Blurry edges on modded model during fast movement (fix: disable DLSS or FSR)
-- Glitch with duplicate modded objects on screen (merged skeleton limitation)
+- Glitch with duplicate modded objects on screen (Merged Skeleton hard limitation, won't be fixed)
 
 ## Features
 
@@ -38,12 +37,11 @@
 
 ## WWMI Installation
 
-1. Install [**Python**](https://www.python.org/downloads/) (it's widely used for different modding tools)
-2. Force Wuthering Waves to load in **DX11** mode:
+1. Force Wuthering Waves to load in **DX11** mode:
     * Locate and open following folder:
-    `\Wuthering Waves Game\Engine\Plugins\Runtime\`
+    `\Wuthering Waves Game\Engine\Plugins\Runtime\Streamline\`
     * Remove Nvidia folder
-3. Change [Character LOD settings](https://gamebanana.com/tuts/17580) in **Engine.ini**:
+2. Change [Character LOD settings](https://gamebanana.com/tuts/17580) in **Engine.ini**:
     * Open `\Wuthering Waves\Wuthering Waves Game\Client\Saved\Config\WindowsNoEditor\Engine.ini`
     * Add following lines to the bottom of the file:
     ```ini
@@ -51,14 +49,14 @@
     r.Kuro.SkeletalMesh.LODDistanceScale=25
     r.Streaming.FullyLoadUsedTextures=1
     ```
-4. [Extract](https://support.microsoft.com/en-us/windows/zip-and-unzip-files-f6dde0a7-0fec-8294-e1d3-703ed85e7ebc) WWMI archive to any convenient location
-5. Open **d3dx.ini** in WWMI folder with text editor of your choise
-6. Locate **[Loader]** section in the top of the file
-7. Change `launch = ` according to location of your Wuthering Waves folder, for example:
+3. [Extract](https://support.microsoft.com/en-us/windows/zip-and-unzip-files-f6dde0a7-0fec-8294-e1d3-703ed85e7ebc) WWMI archive to any convenient location
+4. Open **d3dx.ini** in WWMI folder with text editor of your choise
+5. Locate **[Loader]** section in the top of the file
+6. Change `launch = ` according to location of your Wuthering Waves folder, for example:
     ```ini
     launch = C:\Games\WutheringWavesj3oFh\Wuthering Waves Game\Client\Binaries\Win64\Client-Win64-Shipping.exe
     ```
-8. Double-click **WWMI Loader.exe** to start the game with WWMI
+7. Double-click **WWMI Loader.exe** to start the game with WWMI
 
 ## Mod Installation
 
@@ -77,6 +75,7 @@ To properly load newly installed mod without restarting the game:
 - **[F12]**: Toggle User Guide
 - **[F6]**: Toggle WWMI dependant mods
 - **[F10]**: Reload WWMI and save mods settings
+- **[Alt]+[F12]**: Toggle 0.6.X Compatibility Mode
 
 ## Mod Development
 To get into mod creation refer to the **WWMI Tools** and its [Modder Guide](https://github.com/SpectrumQT/WWMI-TOOLS/blob/main/guides/modder_guide.md):
