@@ -66,14 +66,14 @@ void main(uint3 ThreadId : SV_DispatchThreadID)
     if (is_custom_mesh && ThreadId.x >= 32) {
         // Copy custom shape key values to override defaults
         float4 custom_values = CustomShapeKeyValuesRW[ThreadId.x-32];
-        // Override default values with non-zero custom values (zero is encoded as 1.0)
+        // Override default values with custom values (zero is encoded as 1000000.0)
         // 1. If 'shape_key_value == 0.0', default shape key value won't be overriden
-        // 2. If 'shape_key_value == 1.0', default shape key will be overrided with zero (0.0)
-        // 3. If 'shape_key_value > 1.0', default shape key will be overrided with 'shape_key_value - 1.0'
-        default_values.x = custom_values.x >= 1.0 ? asuint(custom_values.x - 1.0) : default_values.x;
-        default_values.y = custom_values.y >= 1.0 ? asuint(custom_values.y - 1.0) : default_values.y;
-        default_values.z = custom_values.z >= 1.0 ? asuint(custom_values.z - 1.0) : default_values.z;
-        default_values.w = custom_values.w >= 1.0 ? asuint(custom_values.w - 1.0) : default_values.w;
+        // 2. If 'shape_key_value == 1000000.0', default shape key will be overrided with zero (0.0)
+        // 3. If 'shape_key_value != 0', default shape key will be overrided with 'shape_key_value - 1000000.0'
+        default_values.x = custom_values.x != 0 ? asuint(custom_values.x - 1000000.0) : default_values.x;
+        default_values.y = custom_values.y != 0 ? asuint(custom_values.y - 1000000.0) : default_values.y;
+        default_values.z = custom_values.z != 0 ? asuint(custom_values.z - 1000000.0) : default_values.z;
+        default_values.w = custom_values.w != 0 ? asuint(custom_values.w - 1000000.0) : default_values.w;
     }
 
     ShapeKeysControlCBRW[ThreadId.x] = default_values;

@@ -30,15 +30,15 @@ void main(uint3 ThreadId : SV_DispatchThreadID)
 
     // ShapeKeyOverrider.hlsl treats custom shape key values in a following way:
     // 1. If 'shape_key_value == 0.0', default shape key value won't be overriden
-    // 2. If 'shape_key_value == 1.0', default shape key will be overrided with zero (0.0)
-    // 3. If 'shape_key_value > 1.0', default shape key will be overrided with 'shape_key_value - 1.0'
+    // 2. If 'shape_key_value == 1000000.0', default shape key will be overrided with zero (0.0)
+    // 3. If 'shape_key_value != 0', default shape key will be overrided with 'shape_key_value - 1000000.0'
     
     // So, following 'shape_key_value' encoding is required:
     // 1. To enable override, we need to set 'shape_key_value += 1.0'
     // 2. To disable override, we need to set 'shape_key_value = 0'
     if (ActionType == 0) {
         // Enable override for this Shape Key
-        shape_key_value += 1.0;
+        shape_key_value += 1000000.0;
     } else if (ActionType == 1) {
         // Disable override for this Shape Key
         shape_key_value = 0;
