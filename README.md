@@ -18,47 +18,28 @@
 
 ## Disclaimers  
 
-- **Alpha-2 Warning** — WWMI is in second alpha testing phase. Feature set and formats are more or less set in stone, but you still can expect some issues here and there.
-
-- **Compatibility Warning** — WWMI doesn't load non-WWMI mods for performance reasons, but if you're okay with up to 50% FPS hit, you can follow [this guide](https://gamebanana.com/tuts/17683) (not recommended).
-
-## Known Issues
-
-- Glitch with duplicate modded objects on screen (Merged Skeleton hard limitation, won't be fixed)
+- **Beta Warning** — WWMI is considered stable and undergoes pre-release polishment.
 
 ## Features
 
 - **Highly Optimized** — Built with minimization of performance footprint in mind
-- **Cross-Platform** — Works with NVidia and AMD GPUs
+- **Cross-Platform** — Works with NVidia, AMD and Intel GPUs
 - **Modder Friendly** — Enables fully automatic model re-import mod creation with [WWMI Tools](https://github.com/SpectrumQT/WWMI-Tools)
 - **No Vertex Limit** — Removes all limitations caused by component layout of original models
 - **Shape Keys Support** — Handles original shape keys overrides and enables creation of custom ones
 - **Bone Merging** — Dynamically merges skeleton data to allow modders work with unified VG list
 
+## Known Issues
+
+- Glitch with duplicate modded objects on screen (Merged Skeleton hard limitation, won't be fixed)
+
 ## WWMI Installation
 
-1. Download and install [the latest Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)
-2. Force Wuthering Waves to load in **DX11** mode:
-    * Locate and open following folder:
-    `\Wuthering Waves Game\Engine\Plugins\Runtime\Nvidia\`
-    * Remove `Streamline` folder
-3. Change [Character LOD settings](https://gamebanana.com/tuts/17580) in **Engine.ini**:
-    * Open `\Wuthering Waves\Wuthering Waves Game\Client\Saved\Config\WindowsNoEditor\Engine.ini`
-    * Add following lines to the bottom of the file:
-    ```ini
-    [ConsoleVariables]
-    r.Kuro.SkeletalMesh.LODDistanceScale=25
-    r.Streaming.FullyLoadUsedTextures=1
-    ```
-4. Download WWMI-vX.X.X.zip from [the latest release](https://github.com/SpectrumQT/WWMI/releases/latest)
-5. [Extract](https://support.microsoft.com/en-us/windows/zip-and-unzip-files-f6dde0a7-0fec-8294-e1d3-703ed85e7ebc) WWMI archive to any convenient location
-6. Open **d3dx.ini** in WWMI folder with text editor of your choise
-7. Locate **[Loader]** section in the top of the file
-8. Change `launch = ` according to location of your Wuthering Waves folder, for example:
-    ```ini
-    launch = C:\Games\WutheringWavesj3oFh\Wuthering Waves Game\Client\Binaries\Win64\Client-Win64-Shipping.exe
-    ```
-9. Double-click **WWMI Loader.exe** to start the game with WWMI
+1. Download the [latest release](https://github.com/SpectrumQT/XXMI-Installer/releases/latest) of **XXMI-Installer-vX.X.X.exe**
+2. Run **XXMI-Installer-vX.X.X.exe** with Double-Click.
+3. Click **[Quick Installation]** to download and install **[XXMI Launcher](https://github.com/SpectrumQT/XXMI-Launcher)**.
+4. Once installation is complete, **XXMI Launcher** window will open and install **WWMI** automatically.
+5. Press **[Start]** to launch the game with WWMI.
 
 ## Mod Installation
 
