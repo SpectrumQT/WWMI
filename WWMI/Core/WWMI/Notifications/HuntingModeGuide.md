@@ -1,6 +1,7 @@
 Debugging:
-To enable, remove ';' before 'include = Core/Debugger/Debugger.ini' in d3dx.ini 
-[SHIFT]+[F1]: Toggle Debug Output (refer to Core/Debugger/Debugger.ini)
+To enable ini errors output, see XXMI Launcher > Settings > WWMI > Mute Warnings
+To enable built-in debugger, remove ';' before 'include = Core/Debugger/Debugger.ini' in d3dx.ini 
+[SHIFT]+[F12]: Toggle Debugger (refer to Core/Debugger/Debugger.ini)
 
 Hunting Mode Hotkeys (NumPad):
 [0]: Toggle Hunting Mode
@@ -16,8 +17,8 @@ Shader Hunting (NumPad):
 Cycle VS (Vertex Shaders): Prev: [4], Next: [5], Copy Hash: [6]
 Cycle PS (Pixel Shaders): Prev: [1], Next: [2], Copy Hash: [3]
 Cycle CS (Compute Shaders): Prev: [.]+[1], Next: [.]+[2], Copy Hash: [.]+[3]
-Note: Shader dumping is disabled by default, see marking_actions in d3dx.ini
+Note: Shader dumping is disabled by default, see XXMI Launcher > Settings > WWMI > Dump Shaders
 
-Refer to d3dx.ini for more details
+Refer to XXMI Launcher > Settings > WWMI and d3dx.ini for more details
 
 Press CTRL+F12 to hide this message

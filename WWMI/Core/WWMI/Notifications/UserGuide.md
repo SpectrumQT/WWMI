@@ -21,6 +21,9 @@ Mod Developer Hotkeys:
 [Ctrl]+[F12]: Toggle Hunting Mode Guide
 Numpad [0]: Toggle Hunting Mode (green text)
 
+XXMI Launcher:
+You may find handful of useful tweaks in launcher Settings!
+
 You can find more mods at:
 https://gamebanana.com/games/20357
 https://discord.com/invite/agmg
