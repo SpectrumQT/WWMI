@@ -4,9 +4,9 @@
 
 <p align="center">
   <a href="#disclaimers">Disclaimers</a> •
-  <a href="#known-issues">Known Issues</a> •
   <a href="#features">Features</a> •
   <a href="#wwmi-installation">WWMI Installation</a> •
+  <a href="#known-issues">Known Issues</a> •
   <a href="#mod-installation">Mod Installation</a> • 
   <a href="#mod-hot-load">Mod Hot Load</a> • 
   <a href="#mod-user-hotkeys">Mod User Hotkeys</a> • 
@@ -22,6 +22,7 @@
 
 ## Features
 
+- **Plug-and-Play** — Fully automated installation and game configuration via **[XXMI Launcher](https://github.com/SpectrumQT/XXMI-Launcher)**
 - **Highly Optimized** — Built with minimization of performance footprint in mind
 - **Cross-Platform** — Works with NVidia, AMD and Intel GPUs
 - **Modder Friendly** — Enables fully automatic model re-import mod creation with [WWMI Tools](https://github.com/SpectrumQT/WWMI-Tools)
@@ -29,17 +30,17 @@
 - **Shape Keys Support** — Handles original shape keys overrides and enables creation of custom ones
 - **Bone Merging** — Dynamically merges skeleton data to allow modders work with unified VG list
 
-## Known Issues
-
-- Glitch with duplicate modded objects on screen (Merged Skeleton hard limitation, won't be fixed)
-
 ## WWMI Installation
 
 1. Download the [latest release](https://github.com/SpectrumQT/XXMI-Installer/releases/latest) of **XXMI-Installer-vX.X.X.exe**
 2. Run **XXMI-Installer-vX.X.X.exe** with Double-Click.
 3. Click **[Quick Installation]** to download and install **[XXMI Launcher](https://github.com/SpectrumQT/XXMI-Launcher)**.
 4. Once installation is complete, **XXMI Launcher** window will open and install **WWMI** automatically.
-5. Press **[Start]** to launch the game with WWMI.
+5. Click **[Start]** to launch the game with **WWMI**.
+
+## Known Issues
+
+- Glitch with duplicate modded objects on screen (Merged Skeleton hard limitation, won't be fixed)
 
 ## Mod Installation
 
