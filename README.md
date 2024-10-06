@@ -25,18 +25,17 @@
 - **Plug-and-Play** — Fully automated installation and game configuration via **[XXMI Launcher](https://github.com/SpectrumQT/XXMI-Launcher)**
 - **Highly Optimized** — Built with minimization of performance footprint in mind
 - **Cross-Platform** — Works with NVidia, AMD and Intel GPUs
-- **Modder Friendly** — Enables fully automatic model re-import mod creation with [WWMI Tools](https://github.com/SpectrumQT/WWMI-Tools)
+- **Modder Friendly** — Enables fully automatic model re-import mod creation with **[WWMI Tools](https://github.com/SpectrumQT/WWMI-Tools)**
 - **No Vertex Limit** — Removes all limitations caused by component layout of original models
 - **Shape Keys Support** — Handles original shape keys overrides and enables creation of custom ones
 - **Bone Merging** — Dynamically merges skeleton data to allow modders work with unified VG list
 
 ## WWMI Installation
 
-1. Download the [latest release](https://github.com/SpectrumQT/XXMI-Installer/releases/latest) of **XXMI-Installer-vX.X.X.exe**
-2. Run **XXMI-Installer-vX.X.X.exe** with Double-Click.
-3. Click **[Quick Installation]** to download and install **[XXMI Launcher](https://github.com/SpectrumQT/XXMI-Launcher)**.
-4. Once installation is complete, **XXMI Launcher** window will open and install **WWMI** automatically.
-5. Click **[Start]** to launch the game with **WWMI**.
+1. Download the [latest release](https://github.com/SpectrumQT/XXMI-Launcher/releases/latest) of **XXMI-Launcher-Installer-Online-vX.X.X.msi**
+2. Run **XXMI-Launcher-Installer-Online-vX.X.X.msi** with Double-Click.
+3. Click **[Quick Installation]** to install **XXMI Launcher** to the default location (`%AppData%\XXMI Launcher`) or use **[Custom Installation]** to set another folder.
+4. Once installation is complete, **XXMI Launcher** window will open and install **XXMI** automatically.
 
 ## Known Issues
 
@@ -83,10 +82,10 @@ To get into mod creation refer to the **WWMI Tools** and its [Modder Guide](http
 
 ## Credits
 
-Chiri, [Bo3b](https://github.com/bo3b), [DarkStarSword](https://github.com/DarkStarSword) - creators of original 3dmigoto, huge thanks to those guys!
-[SilentNightSound](https://gamebanana.com/members/2176153) - custom 3dmigoto fork, initial WuWa research, AGMG legend (ary Sucrose enjoyer)
-[SpectrumQT](https://gamebanana.com/members/2837527), [SinsOfSeven](https://gamebanana.com/members/2823441) - WWMI Development
-[Leotorrez](https://gamebanana.com/members/2419201), [Petrascyll](https://gamebanana.com/members/2644630), [Zlevir](https://gamebanana.com/members/2694449), [Caverabbit](https://gamebanana.com/members/2987570) - WWMI Contribution
+- Chiri, [Bo3b](https://github.com/bo3b), [DarkStarSword](https://github.com/DarkStarSword) - creators of original 3dmigoto, huge thanks to those guys!
+- [SilentNightSound](https://gamebanana.com/members/2176153) - custom 3dmigoto fork, initial WuWa research, AGMG legend (ary Sucrose enjoyer)
+- [SpectrumQT](https://gamebanana.com/members/2837527), [SinsOfSeven](https://gamebanana.com/members/2823441) - WWMI Development
+- [Leotorrez](https://gamebanana.com/members/2419201), [Petrascyll](https://gamebanana.com/members/2644630), [Zlevir](https://gamebanana.com/members/2694449), [Caverabbit](https://gamebanana.com/members/2987570) - WWMI Contribution
 
 ## License
 
