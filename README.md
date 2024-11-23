@@ -35,7 +35,8 @@
 1. Download the [latest release](https://github.com/SpectrumQT/XXMI-Launcher/releases/latest) of **XXMI-Launcher-Installer-Online-vX.X.X.msi**
 2. Run **XXMI-Launcher-Installer-Online-vX.X.X.msi** with Double-Click.
 3. Click **[Quick Installation]** to install **XXMI Launcher** to the default location (`%AppData%\XXMI Launcher`) or use **[Custom Installation]** to set another folder.
-4. Once installation is complete, **XXMI Launcher** window will open and install **XXMI** automatically.
+4. On game selection page of **XXMI Launcher** window click Wuthering Waves tile to add WWMI icon to the top-left corner.
+5. Click WWMI icon to open WWMI launcher page and press **[Install]** button to download and install WWMI.
 
 ## Known Issues
 
