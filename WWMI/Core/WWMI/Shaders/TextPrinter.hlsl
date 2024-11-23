@@ -15,6 +15,12 @@ StructuredBuffer<TextParameters> params : register(t114);
 static float2 cur_pos;
 // static float4 resolution;
 #define resolution IniParams[0].xy
+
+// Default return of effective_dpi is 96 for 100% or undetected scaling
+// Since Windows defaults to 125% scaling at 1080p, lets use 96*1.25=120 as actual basis
+// So anything beyond 120 should be scaled up
+#define ScreenScaling (IniParams[0].w > 120 ? IniParams[0].w / 120 : 1)
+
 static float2 char_size;
 static int2 meta_pos_start;
 
@@ -79,7 +85,7 @@ RWStructuredBuffer<cs2gs> textpos : register(u0);
 void main()
 {
 	get_meta();
-	float2 char_dim = char_size.xy / resolution.xy * 2 * params[0].font_scale;
+	float2 char_dim = char_size.xy / resolution.xy * 2 * params[0].font_scale * ScreenScaling;
 	uint pos;
 	uint c;
 	uint gs = 1;
@@ -105,7 +111,7 @@ void main()
 			space_x = cur_pos.x;
 		}
 
-		cur_pos.x += get_char_dimensions(c).x / resolution.x * 2 * params[0].font_scale;
+		cur_pos.x += get_char_dimensions(c).x / resolution.x * 2 * params[0].font_scale * ScreenScaling;
 
 		// FIXME: Refactor
 
@@ -273,7 +279,7 @@ void emit_char(uint c, inout TriangleStream<gs2ps> ostream)
 
 	if (c >= ' ' && c < 0x7f) {
 		gs2ps output;
-		float2 dim = float2(cdim.x, char_size.y) / resolution.xy * 2 * params[0].font_scale;
+		float2 dim = float2(cdim.x, char_size.y) / resolution.xy * 2 * params[0].font_scale * ScreenScaling;
 		float texture_x_percent = cdim.x / char_size.x;
 
 		texcoord.x = (c % 16) * char_size.x;
@@ -296,7 +302,7 @@ void emit_char(uint c, inout TriangleStream<gs2ps> ostream)
 	}
 
 	// Increment current position taking specific character width into account:
-	cur_pos.x += cdim.x / resolution.x * 2 * params[0].font_scale;
+	cur_pos.x += cdim.x / resolution.x * 2 * params[0].font_scale * ScreenScaling;
 }
 
 // Using a macro for this because a function requires us to know the size of the buffer
@@ -443,7 +449,7 @@ void main(point vs2gs input[1], inout TriangleStream<gs2ps> ostream)
 {
 	get_meta();
 	uint idx = input[0].idx;
-	float2 char_dim = char_size.xy / resolution.xy * 2 * params[0].font_scale;
+	float2 char_dim = char_size.xy / resolution.xy * 2 * params[0].font_scale * ScreenScaling;
 	float4 r = params[0].rect;
 
 	// Anchor the text & rectangle as requested. This will also resize the
